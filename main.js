@@ -14,7 +14,7 @@ console.log("hello " + userName + " would you like to learn python today?");
 var stdName = "ali Khan";
 var lowerCaseName = stdName.toLowerCase();
 var upperCaseName = stdName.toUpperCase();
-var titleCaseName = stdName.split(" ").map(function (chaar) { return chaar[0].toUpperCase() + chaar[1].toLocaleUpperCase; }).join("");
+var titleCaseName = stdName.split(" ").map(function (chaar) { return chaar[0].toUpperCase() + (chaar.length > 1 ? chaar.slice(1).toLowerCase() : " "); }).join("");
 console.log(lowerCaseName);
 console.log(upperCaseName);
 console.log(titleCaseName);
@@ -165,4 +165,15 @@ if (myFavouriteFruits.includes("peach")) {
 }
 if (myFavouriteFruits.includes("apricot")) {
     console.log("i realy like apricot");
+}
+// Q30
+var userNames = ["admin", "kinza", "fariha", "sana", "aqsa"];
+for (var _i = 0, userNames_1 = userNames; _i < userNames_1.length; _i++) {
+    var user = userNames_1[_i];
+    if (user === "admin") {
+        console.log("Hello admin, would you like to see a status report?");
+    }
+    else {
+        console.log('Hello' + user + 'thank you for logging in again.');
+    }
 }

@@ -6,7 +6,7 @@ console.log("hello "+ userName + " would you like to learn python today?");
 let stdName:string = "ali Khan";
 let lowerCaseName:string = stdName.toLowerCase();
 let upperCaseName:string = stdName.toUpperCase();
-let titleCaseName:string = stdName.split(" ").map((chaar :string) => chaar[0].toUpperCase() + chaar[1].toLocaleUpperCase).join("");
+let titleCaseName:string = stdName.split(" ").map((chaar :string) => chaar[0].toUpperCase() + (chaar.length>1 ? chaar.slice(1).toLowerCase() : " ")).join(" ");
 console.log(lowerCaseName);
 console.log(upperCaseName);
 console.log(titleCaseName);
